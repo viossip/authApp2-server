@@ -5,14 +5,12 @@ var appRouter = function (app) {
     app.get("/", function(req, res) {
 
       var creds = req.query;
-      var num = Math.floor((Math.random() * 5) + 1);
+      var num = Math.floor((Math.random() * 3) + 1);
 
       if(creds.password && creds.username){
         if(credentials[creds.username]== creds.password){
-          console.log("-----username = " + creds.username + " pass: " + creds.password)
           res.status(200).send("flip_" + num +"_times");
         } else {
-          console.log("-----credentials[creds.username] = " + credentials[creds.username])
           res.status(401).send('Unauthorized');
         }
       } else {
