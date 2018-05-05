@@ -12,8 +12,7 @@ var appRouter = function (app) {
 
       if(requestData.password && requestData.username && requestData.id){
         if(permitted[requestData.username] == requestData.password && clients[requestData.id]){
-            var pass = clients[requestData.id].split(':');
-            res.status(200).send(requestData.id + ":" + pass[0] + ":" + pass[1]);
+            res.status(200).send(requestData.id + ":" + clients[requestData.id]);
         } else {
           res.status(401).send('Unauthorized');
         }
