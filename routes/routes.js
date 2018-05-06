@@ -1,7 +1,8 @@
 var permitted = { sudo : '1111', admin : '1234', username : "password" };
 
 var clients = { 000000000000000 : "1234:2" ,
-                359457078472619 : "1111:3" } ; // etc.
+                359457078472619 : "1111:3" ,
+                356421070399199 : "1212:3" } ; // etc.
 
 var appRouter = function (app) {
 
