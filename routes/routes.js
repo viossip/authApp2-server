@@ -9,7 +9,6 @@ var appRouter = function (app) {
     app.get("/", function(req, res) {
 
       var requestData = req.query;
-      var num = Math.floor((Math.random() * 3) + 1);
 
       if(requestData.password && requestData.username && requestData.id){
         if(permitted[requestData.username] == requestData.password && clients[requestData.id]){
